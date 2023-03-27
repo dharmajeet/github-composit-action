@@ -8,9 +8,5 @@ jobs:
       - run: echo {{GITHUB_ACTION_PATH}}
         shell: bash
       - uses: actions/checkout@v3
-      - id: foo
-        uses: actions/github-composit-action@v1
-        with:
-          who-to-greet: 'Dharmajeet'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
