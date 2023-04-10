@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: run composit action
-        uses: dharmajeet/github-composit-action@v1.1
+        uses: dharmajeet/github-composit-action@v1.1.1
         with:
          who-to-greet: 'dharmajeet'         
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
