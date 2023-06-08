@@ -27,7 +27,7 @@ jobs:
           echo node version 
           echo npm version   
       - name: run composit action
-        uses: dharmajeet/github-composit-action@v2.0.0
+        uses: dharmajeet/github-composit-action@v1.1.1
         with:
          who-to-greet: 'dharmajeet'         
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
