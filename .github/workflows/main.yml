@@ -25,7 +25,8 @@ jobs:
       - name: Configure Node
         run: |
           echo node version 
-          echo npm version   
+          echo npm version  
+          ls
       - name: run composit action
        #uses: dharmajeet/github-composit-action@v3.0.0
         uses: ./../../github-composit-action
