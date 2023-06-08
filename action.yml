@@ -5,10 +5,6 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
-  recovery_art_npm:
-    description: 'Recovery ART NPM'
-    required: true
-  
 outputs:
   random-number:
     description: "Random number"
@@ -21,14 +17,11 @@ runs:
     - id: random-number-generator
       run: echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
       shell: bash
-    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+    - run: actions/setup-dotnet@v3
       shell: bash
-    #- run: goodbye.sh
-    # shell: bash
+    - run: ./../../goodbye.sh
+      shell: bash
     - name: Configure Node
         run: |
-          echo node version: $(node -v)
-          echo npm version: $(npm -v)         
-          npm config set email='dharmjeet.yadav@gmail.com'
-          npm config set always-auth=true
-          echo recovery_art_npm ${{ inputs.recovery_art_npm }}
+          echo node version 
+          echo npm version    
