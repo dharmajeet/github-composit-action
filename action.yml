@@ -5,6 +5,10 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  recovery_art_npm:
+    description: 'Recovery ART NPM'
+    required: true
+  
 outputs:
   random-number:
     description: "Random number"
@@ -21,3 +25,10 @@ runs:
       shell: bash
     #- run: goodbye.sh
     # shell: bash
+    - name: Configure Node
+        run: |
+          echo node version: $(node -v)
+          echo npm version: $(npm -v)         
+          npm config set email='dharmjeet.yadav@gmail.com'
+          npm config set always-auth=true
+          echo recovery_art_npm ${{ inputs.recovery_art_npm }}
