@@ -28,7 +28,7 @@ jobs:
           echo npm version  
           ls
       - name: run composit action
-        uses: dharmajeet/github-composit-action@v4.0.0
+        uses: dharmajeet/github-composit-action@v4.0.1
         #uses: ./action.yml
         with:
          who-to-greet: 'dharmajeet'         
